@@ -1,0 +1,29 @@
+#carro {
+    height: 220px;
+    width: 320px;
+    margin-left: -140px;
+    border-radius: 5px;
+}
+
+#carros {
+    margin-left: -90px;
+}
+
+#moto {
+    height: 220px;
+    width: 320px;
+    border-radius: 5px;
+    margin-left: -20px;
+}
+
+#motos {
+    margin-left: 30px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#titulo {
+    margin-left: 210%;
+}

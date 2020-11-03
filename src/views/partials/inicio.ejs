@@ -1,0 +1,73 @@
+<br>
+<br>
+<br>
+<h3 class="text-center">Seleccione el tipo de vehiculo que usa:</h3>
+<br>
+<div class="row mt-5 ">
+    <div class="col"></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h1 id="carros">CARROS</h1>
+            </div>
+            <div class="col-md-6 text-center">
+                <h1 class="motos">MOTOS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+<div class="row mt-3 ml-5">
+    <div class="col"></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imgFiles/carros.jpeg" data-toggle="modal" data-target="#exampleModal" alt="" id="carro" srcset="">
+            </div>
+            <div class="col-md-6">
+                <img src="imgFiles/motos.jpeg" alt="" id="moto" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal carro -->
+<form action="/add" method="POST">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">TIPO: CARRO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <%- include('select-carros') -%>
+                </div>
+                <hr/>
+                <div class="modal-body">
+                    <%- include('select-accesorio') -%>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary form-control">Predecir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row mt-5">
+    <div class="col">
+        <div class="row">
+            <div class="col text-center">
+                <h3>
+                    <%= msg %>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>

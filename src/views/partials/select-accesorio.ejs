@@ -1,0 +1,10 @@
+<% if(data2){ %>
+    <select name="accesorio" id="" class="form-control">
+<option value="">Seleccione</option>
+<% for(let x = 0; x < data2.length; x++) { %>
+<option value="<%= data2[x] %>"><%= data2[x] %></option>
+<% } %> 
+</select>
+    <%} else { %>
+        <h1>No hay datos</h1>
+        <% } %>

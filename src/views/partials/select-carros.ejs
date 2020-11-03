@@ -1,0 +1,10 @@
+<% if(data){ %>
+    <select name="marca" id="" class="form-control">
+<option value="">Seleccione</option>
+<% for(let i = 0; i < data.length; i++) { %>
+    <option value="<%= data[i] %>"><%= data[i] %></option>
+<% } %> 
+</select>
+    <%} else { %>
+        <h1>No hay datos</h1>
+        <% } %>
