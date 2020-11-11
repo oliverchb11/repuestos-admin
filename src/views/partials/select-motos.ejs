@@ -1,0 +1,10 @@
+<% if(datam){ %>
+    <select id="" name="marcam" class="form-control">
+<option value="">Seleccione</option>
+<% for(let i = 0; i < datam.length; i++) { %>
+    <option value="<%= datam[i] %>"><%= datam[i] %></option>
+<% } %> 
+</select>
+    <%} else { %>
+        <h1>No hay datos</h1>
+        <% } %>

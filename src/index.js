@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 const path = require('path');
 const repuestosRouter = require('./routers/repuestos.router')
+const repuestosRouter2 = require('./routers/repuestos2.router')
 
 
 
@@ -19,6 +20,7 @@ app.use("/cssFiles", express.static(__dirname + "/public/css"));
 app.use("/imgFiles", express.static(__dirname + "/public/img"));
 //router
 app.use("/", repuestosRouter)
+    // app.use("/", repuestosRouter2)
 
 
 

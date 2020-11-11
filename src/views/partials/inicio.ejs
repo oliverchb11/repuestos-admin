@@ -25,7 +25,7 @@
                 <img src="imgFiles/carros.jpeg" data-toggle="modal" data-target="#exampleModal" alt="" id="carro" srcset="">
             </div>
             <div class="col-md-6">
-                <img src="imgFiles/motos.jpeg" alt="" id="moto" srcset="">
+                <img src="imgFiles/motos.jpeg" alt="" data-toggle="modal" data-target="#exampleModal2" id="moto" srcset="">
             </div>
         </div>
     </div>
@@ -46,11 +46,41 @@
           </button>
                 </div>
                 <div class="modal-body">
+                    <h5>Ingrese Marca de su carro:</h5>
                     <%- include('select-carros') -%>
                 </div>
                 <hr/>
                 <div class="modal-body">
+                    <h5>Ingrese el accesorio de su carro:</h5>
                     <%- include('select-accesorio') -%>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary form-control">Predecir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal moto -->
+<form action="/addd" method="POST">
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">TIPO: MOTO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Ingrese Marca de su moto:</h5>
+                    <%- include('select-motos') -%>
+                </div>
+                <hr/>
+                <div class="modal-body">
+                    <h5>Ingrese el accesorio de su moto:</h5>
+                    <%- include('select-accesorio-moto') -%>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary form-control">Predecir</button>
