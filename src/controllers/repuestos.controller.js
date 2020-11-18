@@ -6,16 +6,18 @@ const brain = require('brain.js')
 //metodos para mostrar y cargar información del carro
 repuestosController.get = async(req = request, res = response) => {
     try {
+        //traer la informacion de marca de l carro
         let dataArr = []
         const listado = await db.collection("Listado").where("TIPO", "==", "CARRO").get()
         listado.forEach(result => {
 
-            if (!result.exists) {
-                console.log('no existe el documento');
-            }
+                if (!result.exists) {
+                    console.log('no existe el documento');
+                }
 
-            dataArr.push(result.data().MARCA)
-        })
+                dataArr.push(result.data().MARCA)
+            })
+            //traer la informacion de accesrio  de l carro
         let dataArr2 = []
         const listado2 = await db.collection("TIPO").where("VEHICULO", "==", "CARRO").get()
         listado2.forEach(result2 => {
